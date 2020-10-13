@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.result-correct {
+  display: none;
+}
+
+.result-incorrect {
+  display:none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

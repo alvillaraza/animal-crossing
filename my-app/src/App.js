@@ -1,46 +1,60 @@
 import React, { useState } from "react";
-// import Form from './components/Form';
+import HeaderChange from "./components/HeaderChange";
 import "./App.css";
 
 function App() {
-  const [newHeader, setNewHeader] = useState("Some Header");
+  const [answer, setAnswer] = useState(null);
 
   const handleChanges = (e) => {
-    setNewHeader(e.target.value);
-    console.log(newHeader);
+    setAnswer(e.target.value);
+    console.log("this answer =", answer);
+    console.log("e.target.value =", e.target.value);
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   console.log(newHeader);
-  //   //TO DO: make new header be the submitted item in form
-  //   setNewHeader(newHeader)
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (answer === "She closes her eyes") {
+      console.log('this is correct')
+    } else {
+      console.log('incorrect');
+    }
+  };
 
   return (
     <div>
-      <div>
-        <h1>{newHeader}</h1>
-        {/* <form> */}
-        New Header: <input type="text" name="header" value={newHeader} onChange={handleChanges} />
+      <form onSubmit={handleSubmit}>
+        Question: "In Animal Crossing: New Horizons, not only are some of Crazy
+        Redd's paintings fake, but they're haunted too! What does the girl in
+        the haunted Wistful Painting do?"
+        <p>
+          <input
+            type="radio"
+            name="choice"
+            value="She winks at you"
+            onChange={handleChanges}
+          />
+          She winks at you
+        </p>
+        <p>
+          <input type="radio" name="choice" value="She picks her nose" onChange={handleChanges} />
+          She picks her nose
+        </p>
+        <p>
+          <input type="radio" name="choice" value="Her earring falls off" onChange={handleChanges} />
+          Her earring falls off
+        </p>
+        <p>
+          <input type="radio" name="choice" value="She closes her eyes" onChange={handleChanges} />
+          She closes her eyes
+        </p>
+        <p>
+          <button>Submit</button>
+        </p>
+      </form>
+      <div className={answer === 'She closes her eyes' ? '' : 'result-correct'}>You are an ACNH pro!</div>
+      <div className={!answer === 'She closes her eyes' ? '' : "result-incorrect"}>wamp wamp wamp</div>
       
-        <p><select onChange={handleChanges}>
-          <option>Some Stuff</option>
-          <option>Other Things</option>
-          <option>Another option</option>
-        </select></p>
-
-        <input type='checkbox' value='some other value' onChange={handleChanges} />{newHeader}
-
-
-       <p> <button
-          onClick={() => {
-            setNewHeader("blah");
-          }}
-        >
-          Change to blah
-        </button></p>
-      </div>
+      <HeaderChange />
     </div>
   );
 }
