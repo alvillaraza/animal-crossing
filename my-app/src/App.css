@@ -7,7 +7,8 @@
 }
 
 .result-incorrect {
-  display:none;
+  color: red;
+  display: none;
 }
 
 .App-logo {

@@ -3,7 +3,7 @@ import HeaderChange from "./components/HeaderChange";
 import "./App.css";
 
 function App() {
-  const [answer, setAnswer] = useState(null);
+  const [answer, setAnswer] = useState('');
 
   const handleChanges = (e) => {
     setAnswer(e.target.value);
@@ -11,18 +11,18 @@ function App() {
     console.log("e.target.value =", e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (answer === "She closes her eyes") {
-      console.log('this is correct')
-    } else {
-      console.log('incorrect');
-    }
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   if (answer === "She closes her eyes") {
+  //     console.log('this is correct')
+  //   } else {
+  //     console.log('incorrect');
+  //   }
+  // };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}> */}
         Question: "In Animal Crossing: New Horizons, not only are some of Crazy
         Redd's paintings fake, but they're haunted too! What does the girl in
         the haunted Wistful Painting do?"
@@ -47,12 +47,12 @@ function App() {
           <input type="radio" name="choice" value="She closes her eyes" onChange={handleChanges} />
           She closes her eyes
         </p>
-        <p>
+        {/* <p>
           <button>Submit</button>
-        </p>
-      </form>
+        </p> */}
+      {/* </form> */}
       <div className={answer === 'She closes her eyes' ? '' : 'result-correct'}>You are an ACNH pro!</div>
-      <div className={!answer === 'She closes her eyes' ? '' : "result-incorrect"}>wamp wamp wamp</div>
+      <div className={answer !== 'She closes her eyes' && answer !=='' ? '' : 'result-incorrect'}>wamp wamp wamp</div>
       
       <HeaderChange />
     </div>
