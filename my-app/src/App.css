@@ -31,9 +31,15 @@ img {
 	text-decoration:none;
   text-shadow:0px 1px 0px #fffffa;
   margin: 5px;
+  transition-property: transform;
+  transition-duration: .16s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform: scale(1);
 }
 .answer-button-container:hover {
-	background-color:#bab1ba;
+  background-color:#bab1ba;
+  transform: scale(1.25);
+  
 }
 .answer-button-container:active {
 	position:relative;
