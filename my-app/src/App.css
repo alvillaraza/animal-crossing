@@ -1,14 +1,59 @@
 .App {
+ 
   text-align: center;
 }
 
+.question-container {
+  margin: 50px;
+  padding: 50px;
+  border: 2px solid #fff563;
+  border-radius: 30px;
+}
+
+
+
+img {
+  max-width: 100%;
+  border-radius: 30px;
+}
+
+.answer-button-container {
+  box-shadow: 3px 4px 0px 0px #9dffb1;
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #81f1f7;
+	display:inline-block;
+	cursor:pointer;
+	color:#c48d3f;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #fffffa;
+  margin: 5px;
+}
+.answer-button-container:hover {
+	background-color:#bab1ba;
+}
+.answer-button-container:active {
+	position:relative;
+	top:1px;
+}
+
+.hide {
+  display:none;
+}
+
+.show {
+  display: block;
+}
+
 .result-correct {
-  display: none;
+  color: green;
 }
 
 .result-incorrect {
   color: red;
-  display: none;
 }
 
 .App-logo {
