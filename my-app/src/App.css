@@ -12,9 +12,13 @@
 
 .question-container-border-correct {
   border-color: green;
+  pointer-events: none;
+  opacity: .5;
 }
 .question-container-border-incorrect {
   border-color: red;
+  pointer-events: none;
+  opacity: .5;
 }
 
 

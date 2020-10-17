@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 
-function QuizQuestion({ question }) {
+function QuizQuestion({ question, score, setScore }) {
   const [answered, setAnswered] = useState(false);
   const [response, setResponse] = useState(null);
+  
+
+  function checkAnswer(answer) {
+    setAnswered(true);
+    if (answer.isCorrect) {
+      setResponse(true); setScore(score + 1)
+    } else {
+      setResponse(false)
+    }
+    console.log('score', answer);
+  }
 
   return (
     <div
@@ -24,11 +35,8 @@ function QuizQuestion({ question }) {
             <div>
               <button
                 className="answer-button-container"
-                onClick={() => {
-                  answer.isCorrect ? setResponse(true) : setResponse(false);
-                  setAnswered(true);
-                }}
-              >
+                onClick={() => checkAnswer(answer)}
+              > 
                 {answer.answer}
               </button>
             </div>
