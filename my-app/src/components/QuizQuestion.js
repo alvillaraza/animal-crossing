@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function QuizQuestion({ question, score, setScore }) {
+function QuizQuestion({ currentSlide, index, question, score, setScore }) {
   const [answered, setAnswered] = useState(false);
   const [response, setResponse] = useState(null);
   
@@ -23,7 +23,7 @@ function QuizQuestion({ question, score, setScore }) {
             ? "question-container-border-correct"
             : "question-container-border-incorrect"
           : ""
-      }`}
+      } ${currentSlide === index ? 'show-slide': 'hide-slide'}`}
     >
       <p className="question-image-container">
         <img src={question.image} />

@@ -8,6 +8,7 @@ import q7 from "./images/q7.jpg";
 
 const QuizData = [
   {
+    
     image: q1,
     question: "Which of the following names is NOT one of the Nook clan?",
     answers: [
