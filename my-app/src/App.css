@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.villager-container{
+.villager-container {
   margin: 50px;
   padding: 50px;
   border: 2px solid #fff563;
@@ -14,6 +14,15 @@
   padding: 50px;
   border: 2px solid #fff563;
   border-radius: 30px;
+}
+
+.prev-button-disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.final-score-button-hide {
+  display: none;
 }
 
 .show-slide {
