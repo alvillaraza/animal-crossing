@@ -1,8 +1,12 @@
 import React from "react";
 
-function VillagersContainer({ villager }) {
+function VillagersContainer({ villager, currentVillager, index }) {
   return (
-    <div className="villager-container">
+    <div
+      className={`villager-container ${
+        currentVillager === index ? "show-slide" : "hide-slide"
+      }`}
+    >
       <p>"{villager.phrase}"</p>
       <h2>{villager.name}</h2>
       <p>

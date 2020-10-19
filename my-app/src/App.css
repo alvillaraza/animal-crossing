@@ -21,7 +21,11 @@
   opacity: 0.5;
 }
 
-.final-score-button-hide {
+.next-button-hide {
+  display: none;
+}
+
+.final-score-hide {
   display: none;
 }
 

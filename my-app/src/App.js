@@ -4,7 +4,6 @@ import { Route } from "react-router-dom";
 import Villagers from "./components/Villagers";
 import LandingPage from "./components/LandingPage";
 import Quiz from "./components/Quiz";
-import QuizFinalScore from "./components/QuizFinalScore";
 
 import "./App.css";
 
@@ -17,9 +16,6 @@ function App() {
       </Route>
       <Route exact path="/villagers">
         <Villagers />
-      </Route>
-      <Route exact path="/final-score">
-        <QuizFinalScore />
       </Route>
     </div>
   );
