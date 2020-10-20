@@ -2,6 +2,28 @@
   text-align: center;
 }
 
+/* You can delete this from here... */
+/* img {
+  display: block;
+  max-height: 180px;
+  max-width: 100%;
+}
+
+.which-villager-app {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.which-villager-app .villager-card {
+  border: 1px black solid;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 8px;
+  flex: 1 1 12.5%;
+} */
+/* ...to here! */
+
 .villager-container {
   margin: 50px;
   padding: 50px;

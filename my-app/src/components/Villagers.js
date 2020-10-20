@@ -33,16 +33,31 @@ function Villagers() {
     return a;
   }
 
+  function swipeLeft(villager) {
+    let rejectedArray = [];
+    rejectedArray.push(villager);
+    // ToDO: after putting in array, get the next villager to show up
+    // setVillagers(villagers + 1);
+    console.log("rejected", rejectedArray);
+  }
+
+  function swipeRight(villager) {
+    let approvedArray = [];
+    approvedArray.push(villager);
+    // ToDO: after putting in array, get the next villager to show up
+    // setVillagers(villagers + 1);
+    console.log("approved", approvedArray);
+  }
   return (
-    <div>
-      <button>Swipe Left</button>
-      <button>Swipe Right</button>
+    <div className="which-villager-app">
       {villagers.map((villager, index) => {
         return (
           <VillagersContainer
             villager={villager}
             currentVillager={currentVillager}
             index={index}
+            swipeLeft={swipeLeft}
+            swipeRight={swipeRight}
           />
         );
       })}
