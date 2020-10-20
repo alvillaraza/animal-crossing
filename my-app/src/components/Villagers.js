@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import VillagersContainer from "./VillagersContainer";
+import QuizData from "../data";
+import axios from "axios";
 
 function Villagers() {
   const [villagers, setVillagers] = useState([]);
@@ -10,25 +11,32 @@ function Villagers() {
     getVillagers();
   }, []);
 
-  function getCurrentVillager() {
-    // randomizer function here: setCurrentVillager(currentVillager)
-    // if villager is swiped left, rejectedArray.push[]
-    //if villager is swiped right, approvedArray.push[]
-  }
   const getVillagers = () => {
     axios
       .get(
         "https://api.nookipedia.com/villagers?api_key=341a2ec2-f95e-4712-8577-086064734045"
       )
       .then((res) => {
-        setVillagers(res.data);
-        console.log(res.data);
+        let tempArray = res.data;
+        setVillagers(shuffle(tempArray));
       })
       .catch((err) => console.log("err"));
   };
 
+  console.log("villagesr", villagers);
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
   return (
     <div>
+      <button>Swipe Left</button>
+      <button>Swipe Right</button>
       {villagers.map((villager, index) => {
         return (
           <VillagersContainer

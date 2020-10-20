@@ -10,6 +10,9 @@ function VillagersContainer({ villager, currentVillager, index }) {
       <p>"{villager.phrase}"</p>
       <h2>{villager.name}</h2>
       <p>
+        <img src={villager.image_url} />
+      </p>
+      <p>
         {villager.gender} {villager.species}
       </p>
       <p>
