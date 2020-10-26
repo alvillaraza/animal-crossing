@@ -6,6 +6,8 @@ import axios from "axios";
 function Villagers() {
   const [villagers, setVillagers] = useState([]);
   const [currentVillager, setCurrentVillager] = useState(0);
+  const [approvedVillagers, setApprovedVillagers] = useState([]);
+  const [rejectedVillagers, setRejectedVillagers] = useState([]);
 
   useEffect(() => {
     getVillagers();
@@ -34,34 +36,32 @@ function Villagers() {
   }
 
   function swipeLeft(villager) {
-    let rejectedArray = [];
-    rejectedArray.push(villager);
-    // ToDO: after putting in array, get the next villager to show up
-    // setVillagers(villagers + 1);
-    console.log("rejected", rejectedArray);
+    setRejectedVillagers([...rejectedVillagers, villager]);
+    setCurrentVillager(currentVillager + 1);
+    // TODO: remove the villager from original list, so that when user comes back, they don't double up on rejecting or approving the same villager twice (so it doesn't show up in rejected/approved array twice)
   }
 
   function swipeRight(villager) {
-    let approvedArray = [];
-    approvedArray.push(villager);
-    // ToDO: after putting in array, get the next villager to show up
-    // setVillagers(villagers + 1);
-    console.log("approved", approvedArray);
+    setApprovedVillagers([...approvedVillagers, villager]);
+    setCurrentVillager(currentVillager + 1);
+    // TODO: remove the villager from original list, so that when user comes back, they don't double up on rejecting or approving the same villager twice (so it doesn't show up in rejected/approved array twice)
   }
   return (
-    <div className="which-villager-app">
-      {villagers.map((villager, index) => {
-        return (
-          <VillagersContainer
-            villager={villager}
-            currentVillager={currentVillager}
-            index={index}
-            swipeLeft={swipeLeft}
-            swipeRight={swipeRight}
-          />
-        );
-      })}
-    </div>
+    <>
+      <div className="which-villager-app">
+        {villagers.map((villager, index) => {
+          return (
+            <VillagersContainer
+              villager={villager}
+              currentVillager={currentVillager}
+              index={index}
+              swipeLeft={swipeLeft}
+              swipeRight={swipeRight}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 }
 
