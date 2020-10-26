@@ -1,4 +1,4 @@
-# react_practice_ray
+# animal-crossing
 
 in my-app folder:
 npm i
