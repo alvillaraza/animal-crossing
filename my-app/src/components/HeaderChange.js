@@ -21,6 +21,7 @@ function HeaderChange() {
     <div>
       <div>
         <h1>{newHeader}</h1>
+        
         {/* <form> */}
         New Header: <input type="text" name="header" value={newHeader} onChange={handleChanges} />
       
