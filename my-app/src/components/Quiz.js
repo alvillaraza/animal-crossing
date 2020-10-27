@@ -53,11 +53,18 @@ function App() {
       </h2>
 
       <div className={currentSlide < QuizData.length ? "final-score-hide" : ""}>
-        <h1>Final Score: {score / (QuizData.length - 1)}</h1>
+        <h1>
+          Final Score: {score}/{QuizData.length}
+        </h1>
         <p>
-          {/* TODO: get restart quiz to work */}
-
-          <button onclick={() => window.location.reload}>Restart Quiz</button>
+          <button
+            onClick={() => {
+              window.location.reload();
+              return false;
+            }}
+          >
+            Restart Quiz
+          </button>
         </p>
       </div>
 

@@ -9,19 +9,20 @@ import "./LandingPage.css";
 function LandingPage() {
   return (
     <>
-      <Link to="/"><h1>ACNH</h1></Link>
-      <div className='landing-page-icons-container'>
-
+      <Link to="/">
+        <h1>ACNH</h1>
+      </Link>
+      <div className="landing-page-icons-container">
         <div>
           <Link to="/quiz">
-          <img className='icon' src={isabelle} alt='isabelle icon' />
+            <img className="icon" src={isabelle} alt="isabelle icon" />
             {/* <p>Are you an ACNH master?</p> */}
           </Link>
         </div>
-        <img src={nookbros} alt='photo of nook brothers'/>
+        <img src={nookbros} alt="photo of nook brothers" />
         <div>
           <Link to="/villagers">
-          <img className='icon' src={villager} alt='villager icon' />
+            <img className="icon" src={villager} alt="villager icon" />
             {/* <p>Which villager do you want on your island?</p> */}
           </Link>
         </div>

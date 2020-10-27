@@ -29,7 +29,7 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
         <img src={question.image} />
       </p>
       <h3 className="question"> {question.question}</h3>
-      <h2 className="answers-container">
+      <div className="answers-container">
         {question.answers.map((answer) => {
           return (
             <div>
@@ -42,7 +42,7 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
             </div>
           );
         })}
-      </h2>
+      </div>
       <div
         className={`validation-container
             ${answered ? "show" : "hide"}
