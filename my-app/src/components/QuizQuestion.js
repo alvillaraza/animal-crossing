@@ -3,16 +3,16 @@ import React, { useState } from "react";
 function QuizQuestion({ currentSlide, index, question, score, setScore }) {
   const [answered, setAnswered] = useState(false);
   const [response, setResponse] = useState(null);
-  
 
   function checkAnswer(answer) {
     setAnswered(true);
     if (answer.isCorrect) {
-      setResponse(true); setScore(score + 1)
+      setResponse(true);
+      setScore(score + 1);
     } else {
-      setResponse(false)
+      setResponse(false);
     }
-    console.log('score', answer);
+    console.log("score", answer);
   }
 
   return (
@@ -23,7 +23,7 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
             ? "question-container-border-correct"
             : "question-container-border-incorrect"
           : ""
-      } ${currentSlide === index ? 'show-slide': 'hide-slide'}`}
+      } ${currentSlide === index ? "show-slide" : "hide-slide"}`}
     >
       <p className="question-image-container">
         <img src={question.image} />
@@ -32,11 +32,15 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
       <div className="answers-container">
         {question.answers.map((answer) => {
           return (
+            
             <div>
+            <i class="far fa-hand-point-right"></i>
               <button
                 className="answer-button-container"
                 onClick={() => checkAnswer(answer)}
-              > 
+              >
+                
+
                 {answer.answer}
               </button>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QuizData from "../data";
 import QuizQuestion from "./QuizQuestion";
+import celebrate from '../images/quiz-results.jpg'
 
 function App() {
   const [score, setScore] = useState(0);
@@ -56,6 +57,7 @@ function App() {
         <h1>
           Final Score: {score}/{QuizData.length}
         </h1>
+        <img src={celebrate}/>
         <p>
           <button
             onClick={() => {
