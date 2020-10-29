@@ -32,15 +32,12 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
       <div className="answers-container">
         {question.answers.map((answer) => {
           return (
-            
-            <div>
-            <i class="far fa-hand-point-right"></i>
+            <div className="hover-pointer">
+              <i class="far fa-hand-point-right"></i>
               <button
                 className="answer-button-container"
                 onClick={() => checkAnswer(answer)}
               >
-                
-
                 {answer.answer}
               </button>
             </div>

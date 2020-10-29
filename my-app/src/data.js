@@ -38,7 +38,7 @@ const QuizData = [
     ],
   },
   {image: q4,
-    question: "Which of the following is NOT a name of an island visitor on New Horizons?",
+    question: "Which of the following is NOT an island visitor on New Horizons?",
     answers: [
       { answer: "Wisp", isCorrect: false, score: 0 },
       { answer: "Redd", isCorrect: false, score: 0 },
@@ -66,12 +66,12 @@ const QuizData = [
     ],
   },
   {image: q7,
-    question: "In total, how many fish are there to catch in Animal Crossing: New Horizons?",
+    question: "Which of the following is a DIY set that becomes available during the spring season?",
     answers: [
-      { answer: "75", isCorrect: false, score: 0 },
-      { answer: "80", isCorrect: true, score: 1 },
-      { answer: "90", isCorrect: false, score: 0 },
-      { answer: "100", isCorrect: false, score: 0 },
+      { answer: "Mermaid DIY", isCorrect: false, score: 0 },
+      { answer: "Bamboo DIY", isCorrect: true, score: 1 },
+      { answer: "Mushroom DIY", isCorrect: false, score: 0 },
+      { answer: "Pumpkin DIY", isCorrect: false, score: 0 },
     ],
   }
 ];

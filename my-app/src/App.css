@@ -102,6 +102,14 @@ button {
   padding: 5px;
   font-weight: bold;
 }
+
+.fa-hand-point-right {
+  opacity: 0;
+}
+
+.hover-pointer:hover .fa-hand-point-right  {
+  opacity: 1;
+}
 /* .answer-button-container {
   box-shadow: 3px 4px 0px 0px #9dffb1;
   background-color: #ededed;
