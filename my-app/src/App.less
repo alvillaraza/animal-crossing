@@ -1,23 +1,13 @@
-@font-face {
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dosis/v18/HhyJU5sn9vOmLxNkIwRSjTVNWLEJN7MV3A.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/dosis/v18/HhyJU5sn9vOmLxNkIwRSjTVNWLEJt7QV3A.ttf) format('truetype');
-}
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;800&display=swap");
+
 body {
   font-family: "Dosis", sans-serif;
 }
+
 .App {
   text-align: center;
 }
+
 /* You can delete this from here... */
 /* img {
   display: block;
@@ -39,8 +29,9 @@ body {
   flex: 1 1 12.5%;
 } */
 /* ...to here! */
+
 .villager-container {
-  background-image: url("images/amiibo-bkground.jpg");
+  background-image: url("./images/amiibo-bkground.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 500px 700px;
@@ -48,38 +39,49 @@ body {
   width: 540px;
   margin: 50px;
   padding: 50px;
-  text-align: center;
+ text-align: center;
+  // border: 2px solid #fff563;
+  // border-radius: 30px;
 }
+
 .villager-img {
   max-width: 40%;
 }
+
 .question {
   background-color: #fffae5;
   padding: 50px;
   border-radius: 30px;
   box-shadow: 10px 10px 5px grey;
 }
+
 .question-container {
   margin: 50px;
   padding: 50px;
   border-radius: 30px;
 }
+
 .prev-button-disable {
   pointer-events: none;
   opacity: 0.5;
 }
+
 .next-button-hide {
   display: none;
 }
+
 .final-score-hide {
   display: none;
 }
+
 .show-slide {
   display: block;
 }
+
 .hide-slide {
   display: none;
 }
+
 .question-container-border-correct {
   border-color: green;
   pointer-events: none;
@@ -90,6 +92,7 @@ body {
   pointer-events: none;
   opacity: 0.5;
 }
+
 .answers-container {
   background-color: #feec9f;
   padding: 30px;
@@ -97,21 +100,28 @@ body {
   display: inline-block;
   /* box-shadow: 10px 10px 5px grey; */
 }
+
 img {
   max-width: 100%;
   border-radius: 30px;
 }
+
 button {
   background-color: transparent;
   border: none;
   padding: 5px;
   font-weight: bold;
 }
-.hover-pointer .fa-hand-point-right {
-  opacity: 0;
-}
-.hover-pointer:hover .fa-hand-point-right {
-  opacity: 1;
+
+.hover-pointer {
+  .fa-hand-point-right {
+    opacity: 0;
+  }
+  &:hover {
+    .fa-hand-point-right {
+      opacity: 1;
+    }
+  }
 }
 /* .answer-button-container {
   box-shadow: 3px 4px 0px 0px #9dffb1;
@@ -139,27 +149,34 @@ button {
   position: relative;
   top: 1px;
 } */
+
 .hide {
   display: none;
 }
+
 .show {
   display: block;
 }
+
 .result-correct {
   color: green;
 }
+
 .result-incorrect {
   color: red;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -170,9 +187,11 @@ button {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App-link {
   color: #61dafb;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
