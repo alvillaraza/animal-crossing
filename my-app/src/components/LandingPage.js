@@ -1,29 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import nookbros from "../images/nookbros.png";
+
 import isabelle from "../images/isabelle-outline.jpg";
 import villager from "../images/villager-outline.jpg";
+import bubble from "../images/acnh-speech-bubble-bg.png";
 import "./LandingPage.css";
 
 function LandingPage() {
   return (
     <>
-      <Link to="/">
-        <h1>ACNH</h1>
-      </Link>
+     
       <div className="landing-page-icons-container">
-        <div>
-          <Link to="/quiz">
-            <img className="icon" src={isabelle} alt="isabelle icon" />
-            {/* <p>Are you an ACNH master?</p> */}
-          </Link>
-        </div>
-        <img src={nookbros} alt="nook brothers" />
         <div>
           <Link to="/villagers">
             <img className="icon" src={villager} alt="villager icon" />
-            {/* <p>Which villager do you want on your island?</p> */}
+            <p>Find Your Villagers</p>
+            <img className="speech-bubble" src={bubble} alt="speech bubble" />
+          </Link>
+        </div>
+        <div>
+          <Link to="/quiz">
+            <img className="icon" src={isabelle} alt="isabelle icon" />
+            <p>Do you know ACNH?</p>
+            <img className="speech-bubble" src={bubble} alt="speech bubble" />
           </Link>
         </div>
       </div>

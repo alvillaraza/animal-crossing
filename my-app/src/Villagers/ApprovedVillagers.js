@@ -4,6 +4,9 @@ function ApprovedVillagers() {
   const approvedVillagers = JSON.parse(
     window.localStorage.getItem("Villagers Approved")
   );
+
+  // TODO: add a button to remove a villager from list
+
   return (
     <div>
       {approvedVillagers.map((av) => {

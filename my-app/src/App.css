@@ -14,6 +14,8 @@
 }
 body {
   font-family: "Dosis", sans-serif;
+  background-image: url("images/acnh-tile.jpg");
+  background-size: 500px 500px;
 }
 .App {
   text-align: center;
@@ -40,10 +42,10 @@ body {
 } */
 /* ...to here! */
 .villager-container {
-  background-image: url("images/amiibo-bkground.jpg");
+  /* background-image: url("images/acnh-tile.jpg");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 500px 700px;
+  background-size: 500px 700px; */
   height: 850px;
   width: 540px;
   margin: 50px;

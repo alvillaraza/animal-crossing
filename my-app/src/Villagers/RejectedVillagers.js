@@ -4,6 +4,9 @@ function RejectedVillagers() {
   const rejectedVillagers = JSON.parse(
     window.localStorage.getItem("Villagers Rejected")
   );
+
+  // TODO: add a button to remove a villager from list
+
   return (
     <div>
       {rejectedVillagers.map((rv) => {

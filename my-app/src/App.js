@@ -1,19 +1,24 @@
 import React from "react";
 import { Route } from "react-router-dom";
 
+import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Quiz from "./components/Quiz";
 import Villagers from "./Villagers/Villagers";
-import ApprovedVillagers from './Villagers/ApprovedVillagers';
-import RejectedVillagers from './Villagers/RejectedVillagers';
+import ApprovedVillagers from "./Villagers/ApprovedVillagers";
+import RejectedVillagers from "./Villagers/RejectedVillagers";
 
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <LandingPage />
-      <Route exact path="/quiz">
+      <Header />
+      <Route exact path="/">
+        <LandingPage />
+      </Route>
+
+      <Route path="/quiz">
         <Quiz />
       </Route>
       <Route exact path="/villagers">
