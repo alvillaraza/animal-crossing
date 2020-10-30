@@ -19,7 +19,7 @@ function LandingPage() {
             {/* <p>Are you an ACNH master?</p> */}
           </Link>
         </div>
-        <img src={nookbros} alt="photo of nook brothers" />
+        <img src={nookbros} alt="nook brothers" />
         <div>
           <Link to="/villagers">
             <img className="icon" src={villager} alt="villager icon" />

@@ -57,7 +57,7 @@ function App() {
         <h1>
           Final Score: {score}/{QuizData.length}
         </h1>
-        <img src={celebrate}/>
+        <img src={celebrate} alt='ACNH celebrate'/>
         <p>
           <button
             onClick={() => {

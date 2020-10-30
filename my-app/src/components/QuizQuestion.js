@@ -26,7 +26,7 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
       } ${currentSlide === index ? "show-slide" : "hide-slide"}`}
     >
       <p className="question-image-container">
-        <img src={question.image} />
+        <img src={question.image} alt='ACNH illustration pertaining to question' />
       </p>
       <h3 className="question"> {question.question}</h3>
       <div className="answers-container">

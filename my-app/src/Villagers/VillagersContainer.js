@@ -1,5 +1,4 @@
 import React from "react";
-import Villagers from "./Villagers";
 
 function VillagersContainer({
   villager,
@@ -24,7 +23,7 @@ function VillagersContainer({
           <p>"{villager.phrase}"</p>
           <h2>{villager.name}</h2>
           <p>
-            <img className="villager-img" src={villager.image_url}  />
+            <img className="villager-img" alt='amiibo card of villager' src={villager.image_url}  />
           </p>
           <p>
             {villager.gender} {villager.species}
