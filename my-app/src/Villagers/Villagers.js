@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 
-import useLocalStorage from './useLocalStorage';
-import ApprovedVillagers from './ApprovedVillagers';
+import useLocalStorage from "./useLocalStorage";
+import ApprovedVillagers from "./ApprovedVillagers";
 
 import VillagersContainer from "./VillagersContainer";
 import axios from "axios";
@@ -11,8 +11,14 @@ import axios from "axios";
 function Villagers() {
   const [villagers, setVillagers] = useState([]);
   const [currentVillager, setCurrentVillager] = useState(0);
-  const [approvedVillagers, setApprovedVillagers] = useLocalStorage('Villagers Approved', []);
-  const [rejectedVillagers, setRejectedVillagers] = useLocalStorage('Villagers Rejected', []);
+  const [approvedVillagers, setApprovedVillagers] = useLocalStorage(
+    "Villagers Approved",
+    []
+  );
+  const [rejectedVillagers, setRejectedVillagers] = useLocalStorage(
+    "Villagers Rejected",
+    []
+  );
 
   useEffect(() => {
     getVillagers();
@@ -55,15 +61,13 @@ function Villagers() {
   return (
     <>
       <div>
-        <Link to="/approved-villagers">Your Approved Villagers</Link>
+
+
+        <Link to="/approved-villagers" >Your Approved Villagers</Link>
       </div>
       <div>
         <Link to="/rejected-villagers">Your Rejected Villagers</Link>
       </div>
-      <Route path="/approved-villagers">
-        <ApprovedVillagers approved={approvedVillagers} />
-      </Route>
-
 
       <div className="which-villager-app">
         {villagers.map((villager, index) => {
