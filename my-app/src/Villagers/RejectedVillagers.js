@@ -1,23 +1,34 @@
 import React from "react";
 
-function RejectedVillagers() {
-  const rejectedVillagers = JSON.parse(
-    window.localStorage.getItem("Villagers Rejected")
-  );
+function RejectedVillagers({ rejectedVillagers, setRejectedVillagers }) {
+  // const rejectedVillagersFromLocalStorage = JSON.parse(
+  //   window.localStorage.getItem("Villagers Rejected")
+  // );
 
-  // TODO: add a button to remove a villager from list
+  // console.log("props", rejVill);
+
+  // // TODO: add a button to remove a villager from list
+  const removeVillager = (villager) => {
+    setRejectedVillagers(rejectedVillagers.filter((v) => v.name !== villager.name));
+    console.log(villager);
+  };
 
   return (
     <div>
+      <p>this is the rejected villagers</p>
       {rejectedVillagers.map((rv) => {
         return (
           <div>
-            <p>"{rv.phrase}"</p>
-          <h2>{rv.name}</h2>
-          <p>
-            <img className="villager-img" alt='amiibo card of villager' src={rv.image_url}  />
-          </p>
-          <p>
+            {/* <p>"{rv.phrase}"</p>
+          <h2>{rv.name}</h2> */}
+            <button onClick={() => removeVillager(rv)}>Remove Villager</button>
+            <img
+              className="villager-img"
+              alt="amiibo card of villager"
+              src={rv.image_url}
+            />
+
+            {/* <p>
             {rv.gender} {rv.species}
           </p>
           <p>
@@ -25,7 +36,7 @@ function RejectedVillagers() {
           </p>
           <p>{rv.sign}</p>
           <p>Personality: {rv.personality}</p>
-          <p>"{rv.quote}"</p>
+          <p>"{rv.quote}"</p> */}
           </div>
         );
       })}

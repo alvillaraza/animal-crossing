@@ -1,5 +1,3 @@
-
-
 body {
   background-image: url("../images/background.png");
   background-size: cover;
@@ -8,18 +6,20 @@ body {
 }
 
 a {
-  font-family: 'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   text-decoration: none;
   font-size: 24px;
 }
 
 .awning {
-  width: 100%;
+  background-image: url("../images/acnh-home-page-awning.png");
+  background-repeat: repeat-x;
+  padding: 15px 30px 50px;
+  background-position: center bottom;
 }
 
 .acnh-title {
-  margin: -500px auto 0;
-  width: 450px;
+  width: 400px;
 }
 .landing-page-icons-container {
   display: flex;
@@ -33,15 +33,21 @@ a {
   box-shadow: 5px 10px 5px grey;
 }
 
-.speech-bubble {
+/* .speech-bubble {
   width: 240px;
   margin: -400px auto 0;
-  /* position: absolute;  */
-   /* z-index: -1; */
+  z-index: -1;
+} */
 
+.landing-page-text {
+    background-image: url("../images/acnh-speech-bubble-bg.png");
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 46px 36px;
+  transform: translateY(-30px);
+  
 }
-
 p {
-  color: red;
-  z-index: 1;
-}
+    margin: 0;
+  }

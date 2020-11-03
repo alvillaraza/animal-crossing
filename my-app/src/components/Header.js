@@ -9,10 +9,11 @@ import "./LandingPage.css";
 function Header() {
   return (
     <>
-      <img className="awning" src={awning} alt="awning" />
+      <div className="awning">
       <Link to="/">
         <img className="acnh-title" src={title} alt="acnh title" />
-      </Link>
+        </Link>
+        </div>
      
     </>
   );

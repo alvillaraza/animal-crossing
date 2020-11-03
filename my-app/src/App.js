@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Quiz from "./components/Quiz";
 import Villagers from "./Villagers/Villagers";
+import VillagersContainer from './Villagers/VillagersContainer';
 import ApprovedVillagers from "./Villagers/ApprovedVillagers";
 import RejectedVillagers from "./Villagers/RejectedVillagers";
 
@@ -24,12 +25,12 @@ function App() {
       <Route exact path="/villagers">
         <Villagers />
       </Route>
-      <Route path="/approved-villagers">
+      {/* <Route path="/approved-villagers">
         <ApprovedVillagers />
       </Route>
       <Route path="/rejected-villagers">
         <RejectedVillagers />
-      </Route>
+      </Route> */}
     </div>
   );
 }

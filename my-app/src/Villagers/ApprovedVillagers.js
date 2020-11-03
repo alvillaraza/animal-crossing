@@ -11,7 +11,7 @@ function ApprovedVillagers() {
     <div>
       {approvedVillagers.map((av) => {
         return (
-          <div>
+          <div className='villager-container'>
             <p>"{av.phrase}"</p>
           <h2>{av.name}</h2>
           <p>
