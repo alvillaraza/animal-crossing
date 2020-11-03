@@ -20,6 +20,7 @@ function Villagers() {
       <Router>
         <Link to='/rejected-villagers'><button>Rejected Villagers</button></Link>
         <Link to='/approved-villagers'><button>Approved Villagers</button></Link>
+        <Link to='villagers'><button>Back to Villagers</button></Link>
 
 
         <Route exact path='/villagers' render={() => <VillagersContainer setApprovedVillagers={setApprovedVillagers} setRejectedVillagers={setRejectedVillagers} approvedVillagers={approvedVillagers} rejectedVillagers={rejectedVillagers} />} />
