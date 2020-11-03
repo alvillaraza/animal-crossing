@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import Villagers from "./Villagers";
 
 function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approvedVillagers, rejectedVillagers}) {
   const [villagers, setVillagers] = useState([]);
@@ -33,6 +32,10 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
     // TODO: remove the villager from original list, so that when user comes back, they don't double up on rejecting or approving the same villager twice (so it doesn't show up in rejected/approved array twice)
   }
 
+  function skip() {
+    setCurrentVillager(currentVillager + 1)
+  }
+
   const getVillagers = () => {
     axios
       .get(
@@ -47,7 +50,7 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
 
   return (
     <>
-      <p>this is villager container</p>
+    
 
       {villagers.map((villager, index) => (
         <div
@@ -56,7 +59,8 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
           }`}
         ><div className="button-swipe">
         {/* TODO: need to move these buttons so it's outside of the card */}
-        <button onClick={() => swipeLeft(villager)}>Swipe Left</button>
+            <button onClick={() => swipeLeft(villager)}>Swipe Left</button>
+            <button onClick={() => skip()}>Skip</button>
         <button onClick={() => swipeRight(villager)}>
           Swipe Right
         </button>

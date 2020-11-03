@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import useLocalStorage from "./useLocalStorage";
 import RejectedVillagers from "./RejectedVillagers";
 
 import VillagersContainer from "./VillagersContainer";
-import axios from "axios";
+import ApprovedVillagers from './ApprovedVillagers';
+
 
 function Villagers() {
 
@@ -14,17 +14,18 @@ function Villagers() {
   const [rejectedVillagers, setRejectedVillagers] = useState([]);
 
 
-  
-
-
   return (
     <>
+      
       <Router>
-        <Link to='/rejected-villagers'>Rejected Villagers</Link>
+        <Link to='/rejected-villagers'><button>Rejected Villagers</button></Link>
+        <Link to='/approved-villagers'><button>Approved Villagers</button></Link>
 
 
-        <Route exact path='/villagers' render={() => <VillagersContainer setApprovedVillagers={setApprovedVillagers} setRejectedVillagers={setRejectedVillagers} approvedVillagers={approvedVillagers} rejectedVillagers={rejectedVillagers}/>}/>
+        <Route exact path='/villagers' render={() => <VillagersContainer setApprovedVillagers={setApprovedVillagers} setRejectedVillagers={setRejectedVillagers} approvedVillagers={approvedVillagers} rejectedVillagers={rejectedVillagers} />} />
+        
         <Route path='/rejected-villagers' render={() => <RejectedVillagers rejectedVillagers={rejectedVillagers} setRejectedVillagers={setRejectedVillagers}/>}/>
+        <Route path='/approved-villagers' render={() => <ApprovedVillagers approvedVillagers={approvedVillagers} setApprovedVillagers={setApprovedVillagers}/>}/>
       </Router>
  
     </>
@@ -32,7 +33,7 @@ function Villagers() {
 }
 
 export default Villagers;
-// TODO: map through villagers in VillagersContainer.js, Route to VillagersContainer.js in Villagers then pass down props
+
 
 
 

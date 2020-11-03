@@ -12,6 +12,7 @@ import RejectedVillagers from "./Villagers/RejectedVillagers";
 import "./App.css";
 
 function App() {
+
   return (
     <div>
       <Header />
@@ -27,9 +28,9 @@ function App() {
       </Route>
       {/* <Route path="/approved-villagers">
         <ApprovedVillagers />
-      </Route>
-      <Route path="/rejected-villagers">
-        <RejectedVillagers />
+      </Route> */}
+      {/* <Route path="/rejected-villagers">
+        <RejectedVillagers/>
       </Route> */}
     </div>
   );

@@ -1,31 +1,37 @@
 import React from "react";
 
-function ApprovedVillagers() {
-  const approvedVillagers = JSON.parse(
-    window.localStorage.getItem("Villagers Approved")
-  );
+function ApprovedVillagers({ approvedVillagers, setApprovedVillagers }) {
 
-  // TODO: add a button to remove a villager from list
+  const removeVillager = (villager) => {
+    setApprovedVillagers(approvedVillagers.filter((v) => v.name !== villager.name));
+    console.log(villager);
+  };
 
   return (
     <div>
-      {approvedVillagers.map((av) => {
+      <p>this is the approved villagers</p>
+      {/*  TODO: if there are no villagers listed, write "add your approved villagers here" */}
+      {approvedVillagers.map((rv) => {
         return (
-          <div className='villager-container'>
-            <p>"{av.phrase}"</p>
-          <h2>{av.name}</h2>
-          <p>
-            <img className="villager-img" alt='amiibo card of villager' src={av.image_url}  />
+          <div>
+            {/* <p>"{rv.phrase}"</p>
+          <h2>{rv.name}</h2> */}
+            <button onClick={() => removeVillager(rv)}>Remove Villager</button>
+            <img
+              className="villager-img"
+              alt="amiibo card of villager"
+              src={rv.image_url}
+            />
+
+            {/* <p>
+            {rv.gender} {rv.species}
           </p>
           <p>
-            {av.gender} {av.species}
+            {rv.birthday_month} {rv.birthday_day}
           </p>
-          <p>
-            {av.birthday_month} {av.birthday_day}
-          </p>
-          <p>{av.sign}</p>
-          <p>Personality: {av.personality}</p>
-          <p>"{av.quote}"</p>
+          <p>{rv.sign}</p>
+          <p>Personality: {rv.personality}</p>
+          <p>"{rv.quote}"</p> */}
           </div>
         );
       })}

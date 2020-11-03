@@ -1,13 +1,7 @@
 import React from "react";
 
 function RejectedVillagers({ rejectedVillagers, setRejectedVillagers }) {
-  // const rejectedVillagersFromLocalStorage = JSON.parse(
-  //   window.localStorage.getItem("Villagers Rejected")
-  // );
 
-  // console.log("props", rejVill);
-
-  // // TODO: add a button to remove a villager from list
   const removeVillager = (villager) => {
     setRejectedVillagers(rejectedVillagers.filter((v) => v.name !== villager.name));
     console.log(villager);
@@ -16,6 +10,7 @@ function RejectedVillagers({ rejectedVillagers, setRejectedVillagers }) {
   return (
     <div>
       <p>this is the rejected villagers</p>
+      {/*  TODO: if there are no villagers listed, write "add your rejected villagers here" */}
       {rejectedVillagers.map((rv) => {
         return (
           <div>
