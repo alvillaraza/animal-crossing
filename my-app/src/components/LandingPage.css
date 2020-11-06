@@ -2,7 +2,6 @@ body {
   background-image: url("../images/background.png");
   background-size: cover;
   text-align: center;
-  
 }
 
 a {
@@ -33,21 +32,24 @@ a {
   box-shadow: 5px 10px 5px grey;
 }
 
-/* .speech-bubble {
-  width: 240px;
-  margin: -400px auto 0;
-  z-index: -1;
-} */
-
-.landing-page-text {
-    background-image: url("../images/acnh-speech-bubble-bg.png");
+.speech-bubble-light {
+  background-image: url("../images/acnh-speech-bubble-bg.png");
 
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+.speech-bubble-brown {
+  background-image: url("../images/acnh-speech-bubble-bg-brown.png");
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.landing-page-text {
   padding: 46px 36px;
   transform: translateY(-30px);
-  
 }
 p {
-    margin: 0;
-  }
+  margin: 0;
+}

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import QuizData from "../data";
 import QuizQuestion from "./QuizQuestion";
-import celebrate from '../images/quiz-results.jpg'
+import celebrate from "../images/quiz-results.jpg";
+
+import minus from "../images/btn-icon-minus.png";
+import plus from "../images/btn-icon-x-remove.png";
+
+import "./QuizQuestion.css";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -22,22 +27,19 @@ function App() {
 
   return (
     <div>
-      <h2>
-        Score: {score}/{QuizData.length}{" "}
-      </h2>
       <button
         className={currentSlide === 0 ? "prev-button-disable" : ""}
         onClick={getPrevSlide}
       >
-        PREV
+        <img src={plus} /> PREV
       </button>
       <button
         onClick={getNextSlide}
         className={currentSlide === QuizData.length ? "next-button-hide" : ""}
       >
-        NEXT
+        <img src={minus} /> NEXT
       </button>
-
+      
       {QuizData.map((question, index) => {
         return (
           <QuizQuestion
@@ -49,15 +51,12 @@ function App() {
           />
         );
       })}
-      <h2>
-        Score: {score}/{QuizData.length}{" "}
-      </h2>
 
       <div className={currentSlide < QuizData.length ? "final-score-hide" : ""}>
         <h1>
           Final Score: {score}/{QuizData.length}
         </h1>
-        <img src={celebrate} alt='ACNH celebrate'/>
+        <img src={celebrate} alt="ACNH celebrate" />
         <p>
           <button
             onClick={() => {
@@ -69,28 +68,6 @@ function App() {
           </button>
         </p>
       </div>
-
-      <button
-        className={currentSlide === 0 ? "prev-button-disable" : ""}
-        onClick={getPrevSlide}
-      >
-        PREV
-      </button>
-
-      <button
-        onClick={getNextSlide}
-        className={currentSlide === QuizData.length ? "next-button-hide" : ""}
-      >
-        NEXT
-      </button>
-
-      {/* <button onClick={getNextSlide}>
-        {currentSlide === QuizData.length - 1 ? (
-          <Link to={"/final-score"}>See Your Final Score</Link>
-        ) : (
-          "NEXT"
-        )}
-      </button> */}
     </div>
   );
 }

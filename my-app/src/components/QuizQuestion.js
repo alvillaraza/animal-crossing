@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import './QuizQuestion.css';
+
 function QuizQuestion({ currentSlide, index, question, score, setScore }) {
   const [answered, setAnswered] = useState(false);
   const [response, setResponse] = useState(null);
@@ -25,11 +27,12 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
           : ""
       } ${currentSlide === index ? "show-slide" : "hide-slide"}`}
     >
+      <div className="question-number">Question #{index + 1}</div>
       <p className="question-image-container">
-        <img src={question.image} alt='ACNH illustration pertaining to question' />
+        <img src={question.image} className='question-image' alt='ACNH illustration pertaining to question' />
       </p>
-      <h3 className="question"> {question.question}</h3>
-      <div className="answers-container">
+      <h3 className="question speech-bubble-light"> {question.question}</h3>
+      <div className="answers-container speech-bubble-brown">
         {question.answers.map((answer) => {
           return (
             <div className="hover-pointer">
