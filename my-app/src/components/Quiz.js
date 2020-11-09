@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import QuizData from "../data";
 import QuizQuestion from "./QuizQuestion";
-import celebrate from "../images/quiz-results.jpg";
+import bell from "../images/icon-bell.png";
 
 import minus from "../images/btn-icon-minus.png";
 import plus from "../images/btn-icon-x-remove.png";
-
 
 import "./QuizQuestion.css";
 
@@ -27,20 +26,24 @@ function App() {
   }
 
   return (
-    <div className='quiz-wrapper'>
-      <button 
-        className={`nav-button nav-button-previous ${currentSlide === 0 ? "prev-button-disable" : ""}`}
+    <div className="quiz-wrapper">
+      <button
+        className={`nav-button nav-button-previous ${
+          currentSlide === 0 ? "prev-button-disable" : ""
+        }`}
         onClick={getPrevSlide}
       >
         <img src={minus} /> PREV
       </button>
       <button
         onClick={getNextSlide}
-        className={`nav-button nav-button-next ${currentSlide === QuizData.length ? "next-button-hide" : ""}`}
+        className={`nav-button nav-button-next ${
+          currentSlide === QuizData.length ? "next-button-hide" : ""
+        }`}
       >
         <img src={plus} /> NEXT
       </button>
-      
+
       {QuizData.map((question, index) => {
         return (
           <QuizQuestion
@@ -53,19 +56,25 @@ function App() {
         );
       })}
 
-      <div className={currentSlide < QuizData.length ? "final-score-hide" : ""}>
-        <h1>
-          Final Score: {score}/{QuizData.length}
-        </h1>
-        <img src={celebrate} alt="ACNH celebrate" />
+      <div
+        className={`final-container ${
+          currentSlide < QuizData.length ? "final-score-hide" : ""
+        }`}
+      >
+        <h1 className="final-score">Final Score</h1>
+        <div className="bell-score">
+          <img src={bell} alt="ACNH bell icon" />
+          {score}/{QuizData.length}
+        </div>
         <p>
           <button
+            className="restart"
             onClick={() => {
               window.location.reload();
               return false;
             }}
           >
-            Restart Quiz
+            Start Over
           </button>
         </p>
       </div>

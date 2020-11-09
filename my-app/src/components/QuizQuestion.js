@@ -30,8 +30,7 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
         <div className="question-number">Question #{index + 1}</div>
         <div
           className={`validation-container
-            ${answered ? "show" : "hide"}
-            ${response ? "result-correct" : "result-incorrect"}`}
+            ${answered ? "show" : "hide"}`}
         >
           {response === true ? <img src={correct} /> : <img src={incorrect} />}
         </div>
