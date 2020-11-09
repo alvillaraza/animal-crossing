@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
-import './QuizQuestion.css';
+import correct from "../images/icon-correct.png";
+import incorrect from "../images/icon-incorrect.png";
+
+import "./QuizQuestion.css";
 
 function QuizQuestion({ currentSlide, index, question, score, setScore }) {
   const [answered, setAnswered] = useState(false);
@@ -20,39 +23,41 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
   return (
     <div
       className={`question-container ${
-        answered
-          ? response
-            ? "question-container-border-correct"
-            : "question-container-border-incorrect"
-          : ""
-      } ${currentSlide === index ? "show-slide" : "hide-slide"}`}
+        currentSlide === index ? "show-slide" : "hide-slide"
+      }`}
     >
-      <div className="question-number">Question #{index + 1}</div>
-      <p className="question-image-container">
-        <img src={question.image} className='question-image' alt='ACNH illustration pertaining to question' />
-      </p>
-      <h3 className="question speech-bubble-light"> {question.question}</h3>
-      <div className="answers-container speech-bubble-brown">
-        {question.answers.map((answer) => {
-          return (
-            <div className="hover-pointer">
-              <i class="far fa-hand-point-right"></i>
-              <button
-                className="answer-button-container"
-                onClick={() => checkAnswer(answer)}
-              >
-                {answer.answer}
-              </button>
-            </div>
-          );
-        })}
-      </div>
-      <div
-        className={`validation-container
+      <div className="question-image-container">
+        <div className="question-number">Question #{index + 1}</div>
+        <div
+          className={`validation-container
             ${answered ? "show" : "hide"}
             ${response ? "result-correct" : "result-incorrect"}`}
-      >
-        {response === true ? "Answer Correct" : "Wrong"}
+        >
+          {response === true ? <img src={correct} /> : <img src={incorrect} />}
+        </div>
+        <img
+          src={question.image}
+          className="question-image"
+          alt="ACNH illustration pertaining to question"
+        />
+      </div>
+      <div className="quiz-question-container">
+        <h3 className="question speech-bubble-light"> {question.question}</h3>
+        <div className="answers-container speech-bubble-brown">
+          {question.answers.map((answer) => {
+            return (
+              <div className="hover-pointer">
+                <i class="far fa-hand-point-right"></i>
+                <button
+                  className="answer-button-container"
+                  onClick={() => checkAnswer(answer)}
+                >
+                  {answer.answer}
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

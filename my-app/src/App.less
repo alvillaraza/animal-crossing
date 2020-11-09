@@ -8,27 +8,7 @@ body {
   text-align: center;
 }
 
-/* You can delete this from here... */
-/* img {
-  display: block;
-  max-height: 180px;
-  max-width: 100%;
-}
 
-.which-villager-app {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.which-villager-app .villager-card {
-  border: 1px black solid;
-  border-radius: 12px;
-  padding: 24px;
-  margin: 8px;
-  flex: 1 1 12.5%;
-} */
-/* ...to here! */
 
 .villager-container {
   background-image: url("./images/amiibo-bkground.jpg");
@@ -39,7 +19,7 @@ body {
   width: 540px;
   margin: 50px;
   padding: 50px;
- text-align: center;
+  text-align: center;
   // border: 2px solid #fff563;
   // border-radius: 30px;
 }
@@ -48,155 +28,63 @@ body {
   max-width: 40%;
 }
 
-.question {
-  background-color: #fffae5;
-  padding: 50px;
-  border-radius: 30px;
-  box-shadow: 10px 10px 5px grey;
-}
+// .question {
+//   background-color: #fffae5;
+//   padding: 50px;
+//   border-radius: 30px;
+//   box-shadow: 10px 10px 5px grey;
+// }
 
-.question-container {
-  margin: 50px;
-  padding: 50px;
-  border-radius: 30px;
-}
+// .question-container {
+//   margin: 100px;
+//   border-radius: 30px;
+// }
 
-.prev-button-disable {
-  pointer-events: none;
-  opacity: 0.5;
-}
+// .prev-button-disable {
+//   pointer-events: none;
+//   opacity: 0.5;
+// }
 
-.next-button-hide {
-  display: none;
-}
+// .next-button-hide {
+//   display: none;
+// }
 
-.final-score-hide {
-  display: none;
-}
+// .final-score-hide {
+//   display: none;
+// }
 
-.show-slide {
-  display: block;
-}
+// .show-slide {
+//   display: block;
+// }
 
-.hide-slide {
-  display: none;
-}
+// .hide-slide {
+//   display: none;
+// }
 
-.question-container-border-correct {
-  border-color: green;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.question-container-border-incorrect {
-  border-color: red;
-  pointer-events: none;
-  opacity: 0.5;
-}
+// .question-container-border-correct {
+//   border-color: green;
+//   pointer-events: none;
+//   opacity: 0.5;
+// }
+// .question-container-border-incorrect {
+//   border-color: red;
+//   pointer-events: none;
+//   opacity: 0.5;
+// }
 
-.answers-container {
-  background-color: #feec9f;
-  padding: 30px;
-  border-radius: 50px;
-  display: inline-block;
-  /* box-shadow: 10px 10px 5px grey; */
-}
+// .answers-container {
+//   background-color: #feec9f;
+//   padding: 30px;
+//   border-radius: 50px;
+//   display: inline-block;
+//   /* box-shadow: 10px 10px 5px grey; */
+// }
 
-img {
-  max-width: 100%;
-  border-radius: 30px;
-}
+// TODO: Remove rounded corners from all images because it's rounding the ACNH header in the awning
 
-button {
-  background-color: transparent;
-  border: none;
-  padding: 5px;
-  font-weight: bold;
-}
 
-.hover-pointer {
-  .fa-hand-point-right {
-    opacity: 0;
-  }
-  &:hover {
-    .fa-hand-point-right {
-      opacity: 1;
-    }
-  }
-}
-/* .answer-button-container {
-  box-shadow: 3px 4px 0px 0px #9dffb1;
-  background-color: #ededed;
-  border-radius: 15px;
-  border: 1px solid #81f1f7;
-  display: inline-block;
-  cursor: pointer;
-  color: #c48d3f;
-  font-size: 17px;
-  padding: 7px 25px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #fffffa;
-  margin: 5px;
-  transition-property: transform;
-  transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transform: scale(1);
-}
-.answer-button-container:hover {
-  background-color: #bab1ba;
-  transform: scale(1.25);
-}
-.answer-button-container:active {
-  position: relative;
-  top: 1px;
-} */
 
-.hide {
-  display: none;
-}
 
-.show {
-  display: block;
-}
 
-.result-correct {
-  color: green;
-}
 
-.result-incorrect {
-  color: red;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

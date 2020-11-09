@@ -12,7 +12,7 @@ function Villagers() {
   const [rejectedVillagers, setRejectedVillagers] = useState([]);
 
   return (
-    <>
+    <div className="villager-wrapper">
       <Router>
         <Link to="/rejected-villagers">
           <button>Rejected Villagers</button>
@@ -56,7 +56,7 @@ function Villagers() {
           )}
         />
       </Router>
-    </>
+    </div>
   );
 }
 
