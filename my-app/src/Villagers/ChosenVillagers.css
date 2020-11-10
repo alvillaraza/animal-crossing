@@ -1,0 +1,28 @@
+.chosen-vill-container {
+  background-image: url("../images/acnh-tile-fruits.jpg");
+  border: 8px solid #fcf8dd;
+  border-radius: 30px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 50px;
+  padding: 50px;
+  text-align: center;
+}
+.remove-vill {
+  background-color: #f3f7de;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.remove-vill img {
+  transform: rotate(45deg);
+  width: 25px;
+  padding: 5px;
+}
+.chosen-vill-name {
+  display: flex;
+  justify-content: center;
+}

@@ -1,5 +1,8 @@
 import React from "react";
 
+import x from "../images/btn-icon-x-remove.png";
+import "./ChosenVillagers.css";
+
 function ApprovedVillagers({ approvedVillagers, setApprovedVillagers }) {
   const removeVillager = (villager) => {
     setApprovedVillagers(
@@ -13,15 +16,22 @@ function ApprovedVillagers({ approvedVillagers, setApprovedVillagers }) {
       {approvedVillagers.length !== 0 ? (
         approvedVillagers.map((rv) => {
           return (
-            <div>
-              <button onClick={() => removeVillager(rv)}>
-                Remove Villager
+            <div className="chosen-vill-container">
+              <button
+                className="remove-vill"
+                onClick={() => removeVillager(rv)}
+              >
+                <img src={x} />
+                Remove
               </button>
               <img
                 className="villager-img"
                 alt="amiibo card of villager"
                 src={rv.image_url}
               />
+              <div className="chosen-vill-name">
+                <div className="speech-bubble-light">{rv.name}</div>
+              </div>
             </div>
           );
         })

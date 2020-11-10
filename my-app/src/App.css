@@ -18,17 +18,4 @@ body {
 .App {
   text-align: center;
 }
-.villager-container {
-  background-image: url("images/amiibo-bkground.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 500px 700px;
-  height: 850px;
-  width: 540px;
-  margin: 50px;
-  padding: 50px;
-  text-align: center;
-}
-.villager-img {
-  max-width: 40%;
-}
+

@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import minus from "../images/btn-icon-minus.png";
+import plus from "../images/btn-icon-x-remove.png";
 
-function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approvedVillagers, rejectedVillagers}) {
+import "./Villagers.css";
+
+function VillagersContainer({
+  setApprovedVillagers,
+  setRejectedVillagers,
+  approvedVillagers,
+  rejectedVillagers,
+}) {
   const [villagers, setVillagers] = useState([]);
   const [currentVillager, setCurrentVillager] = useState(0);
 
@@ -18,7 +27,6 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
     return a;
   }
 
-  
   function swipeLeft(villager) {
     setRejectedVillagers([...rejectedVillagers, villager]);
     setCurrentVillager(currentVillager + 1);
@@ -33,7 +41,7 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
   }
 
   function skip() {
-    setCurrentVillager(currentVillager + 1)
+    setCurrentVillager(currentVillager + 1);
   }
 
   const getVillagers = () => {
@@ -50,40 +58,57 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
 
   return (
     <>
-    
-
       {villagers.map((villager, index) => (
         <div
           className={`villager-container ${
             currentVillager === index ? "show-slide" : "hide-slide"
           }`}
-        ><div className="button-swipe">
-        {/* TODO: need to move these buttons so it's outside of the card */}
-            <button onClick={() => swipeLeft(villager)}>Swipe Left</button>
+        >
+          <div className="button-swipe">
+            {/* TODO: need to move these buttons so it's outside of the card */}
+            <button
+              className="nav-villager"
+              onClick={() => swipeLeft(villager)}
+            >
+              <img src={minus} /> Reject
+            </button>
             <button onClick={() => skip()}>Skip</button>
-        <button onClick={() => swipeRight(villager)}>
-          Swipe Right
-        </button>
-      </div>
+            <button
+              className="nav-villager"
+              onClick={() => swipeRight(villager)}
+            >
+              <img src={plus} /> Invite
+            </button>
+          </div>
           <div className="villager-info">
-            <p>"{villager.phrase}"</p>
-            <h2>{villager.name}</h2>
-            <p>
+            <div className="quotes-container">
+              <div className="speech-bubble-brown">
+                <p>"{villager.phrase}"</p>
+              </div>
+              <div className="speech-bubble-light">
+                <p>"{villager.quote}"</p>
+              </div>
+            </div>
+            <div>
               <img
                 className="villager-img"
                 alt="amiibo card of villager"
                 src={villager.image_url}
               />
-            </p>
-            <p>
+            </div>
+            <div className="name-container">
+              <div className="speech-bubble-orange">
+                <p>{villager.name}</p>
+              </div>
+            </div>
+            {/* <p>
               {villager.gender} {villager.species}
             </p>
             <p>
               {villager.birthday_month} {villager.birthday_day}
             </p>
             <p>{villager.sign}</p>
-            <p>Personality: {villager.personality}</p>
-            <p>"{villager.quote}"</p>
+            <p>Personality: {villager.personality}</p> */}
           </div>
         </div>
       ))}
@@ -92,4 +117,3 @@ function VillagersContainer({ setApprovedVillagers, setRejectedVillagers, approv
 }
 
 export default VillagersContainer;
-

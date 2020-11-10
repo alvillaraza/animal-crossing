@@ -15,13 +15,13 @@ function Villagers() {
     <div className="villager-wrapper">
       <Router>
         <Link to="/rejected-villagers">
-          <button>Rejected Villagers</button>
-        </Link>
-        <Link to="/approved-villagers">
-          <button>Approved Villagers</button>
+          <button className='btn-vill-nav'>Rejected Villagers</button>
         </Link>
         <Link to="villagers">
-          <button>Villager Cards</button>
+          <button className='btn-vill-nav'>See All Villagers</button>
+        </Link>
+        <Link to="/approved-villagers">
+          <button className='btn-vill-nav'>Approved Villagers</button>
         </Link>
 
         <Route

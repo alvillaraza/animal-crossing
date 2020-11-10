@@ -1,0 +1,61 @@
+.villager-wrapper .btn-vill-nav {
+  background-color: #0ec7b8;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.villager-wrapper .btn-vill-nav:hover {
+  background-image: url("../images/acnh-dialog-tile.png");
+}
+.villager-container {
+  background-image: url("../images/acnh-tile-fruits.jpg");
+  border: 8px solid #fcf8dd;
+  border-radius: 30px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 50px;
+  padding: 50px;
+  text-align: center;
+}
+.villager-container .nav-villager {
+  background-color: #f3f7de;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-right: 10px;
+  border: none;
+  box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.villager-container button img {
+  width: 25px;
+  padding: 5px;
+}
+.villager-container .villager-info .quotes-container {
+  display: flex;
+  justify-content: center;
+}
+.villager-container .villager-info p {
+  padding: 46px 36px;
+}
+.villager-container .name-container {
+  display: flex;
+  justify-content: center;
+}
+.villager-container .speech-bubble-orange {
+  background-image: url("../images/acnh-speech-bubble-bg-orange.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.hide-slide {
+  display: none;
+}
+.show-slide {
+  display: block;
+}
+.villager-img {
+  max-width: 40%;
+}
