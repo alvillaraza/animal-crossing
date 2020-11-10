@@ -1,3 +1,7 @@
+.main-chosen-vill-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .chosen-vill-container {
   background-image: url("../images/acnh-tile-fruits.jpg");
   border: 8px solid #fcf8dd;
@@ -7,6 +11,7 @@
   margin: 50px;
   padding: 50px;
   text-align: center;
+  flex: 1 1 10%;
 }
 .remove-vill {
   background-color: #f3f7de;

@@ -12,7 +12,7 @@ function ApprovedVillagers({ approvedVillagers, setApprovedVillagers }) {
   };
 
   return (
-    <div>
+    <div className='main-chosen-vill-container'>
       {approvedVillagers.length !== 0 ? (
         approvedVillagers.map((rv) => {
           return (
