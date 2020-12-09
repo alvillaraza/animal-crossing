@@ -89,7 +89,7 @@ function VillagersContainer({
             </button>
             {/* <button onClick={() => skip()}>Skip</button> */}
             <button
-              className='nav-villager'
+              className='nav-villager nav-villager-approve'
               onClick={() => swipeRight(villager)}
             >
               <img src={plus} /> Invite

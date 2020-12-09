@@ -48,7 +48,9 @@
   object-fit: contain;
 }
 .villager-container .button-swipe {
+  display: flex;
   position: relative;
+  bottom: 45%;
 }
 .villager-container .button-swipe .nav-villager {
   background-color: #f3f7de;
@@ -63,6 +65,12 @@
   padding-right: 10px;
   border: none;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.villager-container .button-swipe .nav-villager.nav-villager-reject {
+  right: 100%;
+}
+.villager-container .button-swipe .nav-villager.nav-villager-approve {
+  left: 100%;
 }
 .villager-container .button-swipe img {
   width: 25px;
