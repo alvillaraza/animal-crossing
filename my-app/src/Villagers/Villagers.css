@@ -1,28 +1,62 @@
-.villager-wrapper .btn-vill-nav {
+.villager-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.villager-wrapper .villager-nav-container .btn-vill-nav {
   background-color: #0ec7b8;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
 }
-.villager-wrapper .btn-vill-nav:hover {
-  background-image: url("../images/acnh-dialog-tile.png");
+.villager-wrapper .villager-nav-container .btn-vill-nav:hover {
+  background-image: url('../images/acnh-dialog-tile.png');
+}
+.villager-wrapper .villager-nav-container .btn-vill-nav.vill-nav-all {
+  transform: scale(0.75) translateY(-48px);
+}
+.villager-wrapper .villager-nav-container .btn-vill-nav.vill-nav-approved {
+  transform: translateX(-24px);
+}
+.villager-wrapper .villager-nav-container .btn-vill-nav.vill-nav-rejected {
+  transform: translateX(24px);
 }
 .villager-container {
-  background-image: url("../images/acnh-tile-fruits.jpg");
+  background-image: url('../images/acnh-tile-fruits.jpg');
   border: 8px solid #fcf8dd;
   border-radius: 30px;
   background-position: center top;
   background-repeat: no-repeat;
+  background-size: 1000px 1000px;
+  height: 404px;
+  width: 270px;
   margin: 50px;
   padding: 50px;
   text-align: center;
 }
-.villager-container .nav-villager {
+.villager-container .villager-card {
+  display: flex;
+  align-items: center;
+}
+.villager-container .villager-card .villager-img {
+  margin: 20px 0px 20px 20px;
+  width: 230px;
+  height: 380px;
+  object-fit: contain;
+}
+.villager-container .button-swipe {
+  position: relative;
+}
+.villager-container .button-swipe .nav-villager {
   background-color: #f3f7de;
   border-radius: 30px;
   display: flex;
   align-items: center;
+  position: absolute;
+  height: fit-content;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -30,32 +64,41 @@
   border: none;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
-.villager-container button img {
+.villager-container .button-swipe img {
   width: 25px;
   padding: 5px;
 }
-.villager-container .villager-info .quotes-container {
+.villager-container .quotes-container {
   display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 28%;
 }
-.villager-container .villager-info p {
-  padding: 46px 36px;
+.villager-container .quotes-container .speech-bubble-brown {
+  position: relative;
+  right: 20%;
+}
+.villager-container .quotes-container .speech-bubble-light {
+  position: relative;
+  left: 13%;
+}
+.villager-container .quotes-container .speech-bubble-light p {
+  width: 50%;
 }
 .villager-container .name-container {
   display: flex;
   justify-content: center;
 }
 .villager-container .speech-bubble-orange {
-  background-image: url("../images/acnh-speech-bubble-bg-orange.png");
+  background-image: url('../images/acnh-speech-bubble-bg-orange.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+.villager-container p {
+  padding: 46px 36px;
 }
 .hide-slide {
   display: none;
 }
 .show-slide {
   display: block;
-}
-.villager-img {
-  max-width: 40%;
 }

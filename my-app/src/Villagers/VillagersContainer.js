@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-import minus from "../images/btn-icon-minus.png";
-import plus from "../images/btn-icon-x-remove.png";
+import minus from '../images/btn-icon-minus.png';
+import plus from '../images/btn-icon-x-remove.png';
 
-import "./Villagers.css";
+import './Villagers.css';
 
 function VillagersContainer({
   setApprovedVillagers,
   setRejectedVillagers,
   approvedVillagers,
-  rejectedVillagers,
+  rejectedVillagers
 }) {
   const [villagers, setVillagers] = useState([]);
   const [currentVillager, setCurrentVillager] = useState(0);
@@ -47,13 +47,13 @@ function VillagersContainer({
   const getVillagers = () => {
     axios
       .get(
-        "https://api.nookipedia.com/villagers?api_key=341a2ec2-f95e-4712-8577-086064734045"
+        'https://api.nookipedia.com/villagers?api_key=341a2ec2-f95e-4712-8577-086064734045'
       )
       .then((res) => {
         let tempArray = res.data;
         setVillagers(shuffle(tempArray));
       })
-      .catch((err) => console.log("err"));
+      .catch((err) => console.log('err'));
   };
 
   return (
@@ -61,47 +61,47 @@ function VillagersContainer({
       {villagers.map((villager, index) => (
         <div
           className={`villager-container ${
-            currentVillager === index ? "show-slide" : "hide-slide"
+            currentVillager === index ? 'show-slide' : 'hide-slide'
           }`}
         >
-          <div className="button-swipe">
+          <div className='quotes-container'>
+            <div className='speech-bubble-brown'>
+              <p>"{villager.phrase}"</p>
+            </div>
+            <div className='speech-bubble-light'>
+              <p>"{villager.quote}"</p>
+            </div>
+          </div>
+          <div className='villager-card'>
+            <img
+              className='villager-img'
+              alt='amiibo card of villager'
+              src={villager.image_url}
+            />
+          </div>
+          <div className='button-swipe'>
             {/* TODO: need to move these buttons so it's outside of the card */}
             <button
-              className="nav-villager"
+              className='nav-villager nav-villager-reject'
               onClick={() => swipeLeft(villager)}
             >
               <img src={minus} /> Reject
             </button>
-            <button onClick={() => skip()}>Skip</button>
+            {/* <button onClick={() => skip()}>Skip</button> */}
             <button
-              className="nav-villager"
+              className='nav-villager'
               onClick={() => swipeRight(villager)}
             >
               <img src={plus} /> Invite
             </button>
           </div>
-          <div className="villager-info">
-            <div className="quotes-container">
-              <div className="speech-bubble-brown">
-                <p>"{villager.phrase}"</p>
-              </div>
-              <div className="speech-bubble-light">
-                <p>"{villager.quote}"</p>
-              </div>
+
+          <div className='name-container'>
+            <div className='speech-bubble-orange'>
+              <p>{villager.name}</p>
             </div>
-            <div>
-              <img
-                className="villager-img"
-                alt="amiibo card of villager"
-                src={villager.image_url}
-              />
-            </div>
-            <div className="name-container">
-              <div className="speech-bubble-orange">
-                <p>{villager.name}</p>
-              </div>
-            </div>
-            {/* <p>
+          </div>
+          {/* <p>
               {villager.gender} {villager.species}
             </p>
             <p>
@@ -109,7 +109,6 @@ function VillagersContainer({
             </p>
             <p>{villager.sign}</p>
             <p>Personality: {villager.personality}</p> */}
-          </div>
         </div>
       ))}
     </>

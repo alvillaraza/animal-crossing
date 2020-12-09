@@ -13,7 +13,7 @@ function LandingPage() {
         <div>
           <Link to="/villagers">
             <img className="icon" src={villager} alt="villager icon" />
-            <div className="landing-page-text speech-bubble-light">
+            <div className="speech-bubble speech-bubble-light">
               <p>
                 <span>Find Your</span> Villagers
               </p>
@@ -23,7 +23,7 @@ function LandingPage() {
         <div>
           <Link to="/quiz">
             <img className="icon" src={isabelle} alt="isabelle icon" />
-            <div className="landing-page-text speech-bubble-light">
+            <div className="speech-bubble speech-bubble-light">
               <p>
                 <span>Do you know</span> ACNH?
               </p>
