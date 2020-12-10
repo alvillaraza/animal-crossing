@@ -1,17 +1,26 @@
 .main-chosen-vill-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .chosen-vill-container {
-  background-image: url("../images/acnh-tile-fruits.jpg");
+  background-image: url('../images/acnh-tile-fruits.jpg');
   border: 8px solid #fcf8dd;
   border-radius: 30px;
   background-position: center top;
   background-repeat: no-repeat;
-  margin: 50px;
-  padding: 50px;
-  text-align: center;
-  flex: 1 1 10%;
+  background-size: 650px 650px;
+  height: 350px;
+  width: 230px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.chosen-vill-container .villager-img {
+  width: 130px;
+  height: 280px;
+  object-fit: contain;
 }
 .remove-vill {
   background-color: #f3f7de;
@@ -30,4 +39,9 @@
 .chosen-vill-name {
   display: flex;
   justify-content: center;
+  color: #89826f;
+  font-size: 20px;
+}
+.chosen-vill-name .speech-bubble-light {
+  padding: 40px 36px;
 }

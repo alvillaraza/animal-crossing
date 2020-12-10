@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import x from "../images/btn-icon-x-remove.png";
-import "./ChosenVillagers.css";
+import x from '../images/btn-icon-x-remove.png';
+import './ChosenVillagers.css';
 
 function ApprovedVillagers({ approvedVillagers, setApprovedVillagers }) {
   const removeVillager = (villager) => {
@@ -16,21 +16,27 @@ function ApprovedVillagers({ approvedVillagers, setApprovedVillagers }) {
       {approvedVillagers.length !== 0 ? (
         approvedVillagers.map((rv) => {
           return (
-            <div className="chosen-vill-container">
-              <button
-                className="remove-vill"
-                onClick={() => removeVillager(rv)}
-              >
-                <img src={x} />
-                Remove
-              </button>
-              <img
-                className="villager-img"
-                alt="amiibo card of villager"
-                src={rv.image_url}
-              />
-              <div className="chosen-vill-name">
-                <div className="speech-bubble-light">{rv.name}</div>
+            <div className='chosen-vill-container'>
+              <div>
+                <button
+                  className='remove-vill'
+                  onClick={() => removeVillager(rv)}
+                >
+                  <img src={x} />
+                  Remove
+                </button>
+              </div>
+              <div>
+                <img
+                  className='villager-img'
+                  alt='amiibo card of villager'
+                  src={rv.image_url}
+                />
+              </div>
+              <div className='chosen-vill-name'>
+                <div className='speech-bubble-light'>
+                  <p>{rv.name}</p>
+                </div>
               </div>
             </div>
           );

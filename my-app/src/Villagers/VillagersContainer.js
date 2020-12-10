@@ -68,9 +68,13 @@ function VillagersContainer({
             <div className='speech-bubble-brown'>
               <p>"{villager.phrase}"</p>
             </div>
-            <div className='speech-bubble-light'>
-              <p>"{villager.quote}"</p>
-            </div>
+            {villager.quote ? (
+              <div className='speech-bubble-light'>
+                <p>"{villager.quote}"</p>
+              </div>
+            ) : (
+              ''
+            )}
           </div>
           <div className='villager-card'>
             <img
@@ -99,6 +103,33 @@ function VillagersContainer({
           <div className='name-container'>
             <div className='speech-bubble-orange'>
               <p>{villager.name}</p>
+            </div>
+          </div>
+
+          {/* Back of Villager Card */}
+          <div className='villager-container-back'>
+            <div className='villager-back-name'>
+              <h1>{villager.name}</h1>
+              <p>
+                {villager.gender} {villager.species}
+              </p>
+            </div>
+            <div className='villager-back-info'>
+              <div>
+                <h2>
+                  {villager.birthday_month} {villager.birthday_day}
+                </h2>
+                <p>{villager.sign}</p>
+                <h2>{villager.personality}</h2>
+                <p>Personality</p>
+              </div>
+              <div>
+                <img
+                  className='villager-img'
+                  alt='amiibo card of villager'
+                  src={villager.image_url}
+                />
+              </div>
             </div>
           </div>
           {/* <p>

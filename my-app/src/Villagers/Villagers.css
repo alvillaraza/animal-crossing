@@ -36,6 +36,7 @@
   margin: 50px;
   padding: 50px;
   text-align: center;
+  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 .villager-container .villager-card {
   display: flex;
@@ -65,6 +66,7 @@
   padding-right: 10px;
   border: none;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+  color: #88816d;
 }
 .villager-container .button-swipe .nav-villager.nav-villager-reject {
   right: 100%;
@@ -79,15 +81,18 @@
 .villager-container .quotes-container {
   display: flex;
   position: absolute;
-  top: 28%;
+  top: 18%;
+  font-size: 18px;
 }
 .villager-container .quotes-container .speech-bubble-brown {
   position: relative;
   right: 20%;
+  color: #fefbfd;
 }
 .villager-container .quotes-container .speech-bubble-light {
   position: relative;
   left: 13%;
+  color: #89826f;
 }
 .villager-container .quotes-container .speech-bubble-light p {
   width: 50%;
@@ -100,9 +105,48 @@
   background-image: url('../images/acnh-speech-bubble-bg-orange.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  font-size: 30px;
+  color: #fff8fe;
 }
 .villager-container p {
   padding: 46px 36px;
+}
+.villager-container .villager-container-back {
+  background-color: #ebefd6;
+  border: 8px solid #fef7da;
+  border-radius: 30px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 1000px 1000px;
+  height: 404px;
+  width: 270px;
+  margin: 50px;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
+  color: #87836d;
+  text-align: left;
+}
+.villager-container .villager-container-back .villager-back-name {
+  color: #87836d;
+  border-bottom: dashed;
+  width: 50%;
+  padding-bottom: 20px;
+}
+.villager-container .villager-container-back p {
+  padding: 0;
+}
+.villager-container .villager-container-back h2 {
+  margin-bottom: 0;
+}
+.villager-container .villager-container-back .villager-back-info {
+  display: flex;
+  align-items: flex-end;
+  color: #87836d;
+}
+.villager-container .villager-container-back .villager-back-info img {
+  padding-left: 40px;
+  width: 80%;
 }
 .hide-slide {
   display: none;

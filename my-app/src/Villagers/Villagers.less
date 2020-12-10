@@ -49,6 +49,7 @@
   margin: 50px;
   padding: 50px;
   text-align: center;
+  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
 
   .villager-card {
     display: flex;
@@ -80,6 +81,7 @@
       // z-index: 1;
       border: none;
       box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+      color: #88816d;
 
       &.nav-villager-reject {
         // position: relative;
@@ -101,14 +103,17 @@
   .quotes-container {
     display: flex;
     position: absolute;
-    top: 28%;
+    top: 18%;
+    font-size: 18px;
     .speech-bubble-brown {
       position: relative;
       right: 20%;
+      color: #fefbfd;
     }
     .speech-bubble-light {
       position: relative;
       left: 13%;
+      color: #89826f;
       p {
         width: 50%;
       }
@@ -123,11 +128,59 @@
     background-image: url('../images/acnh-speech-bubble-bg-orange.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    font-size: 30px;
+    color: #fff8fe;
   }
   p {
     padding: 46px 36px;
   }
+
+  .villager-container-back {
+    background-color: #ebefd6;
+    border: 8px solid #fef7da;
+    border-radius: 30px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+    height: 404px;
+    width: 270px;
+    margin: 50px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
+    color: #87836d;
+    text-align: left;
+  
+    .villager-back-name {
+      color: #87836d;
+      border-bottom: dashed;
+      width: 50%;
+      padding-bottom: 20px;
+    }
+    p {
+      padding: 0;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  
+    .villager-back-info {
+      display: flex;
+      align-items: flex-end;
+      // justify-content: space-between;
+      color: #87836d;
+      
+
+      img {
+        padding-left: 40px;
+        width: 80%;
+      }
+    }
+
+  }
 }
+
 
 .hide-slide {
   display: none;
