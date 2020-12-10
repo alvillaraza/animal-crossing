@@ -115,7 +115,7 @@ function VillagersContainer({
               </p>
             </div>
             <div className='villager-back-info'>
-              <div>
+              <div className='villager-back-info-text'>
                 <h2>
                   {villager.birthday_month} {villager.birthday_day}
                 </h2>
