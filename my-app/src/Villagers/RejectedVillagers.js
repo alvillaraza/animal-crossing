@@ -12,7 +12,7 @@ function RejectedVillagers({ rejectedVillagers, setRejectedVillagers }) {
   };
 
   return (
-    <div>
+    <div className='main-chosen-vill-container'>
       {rejectedVillagers.length !== 0 ? (
         rejectedVillagers.map((rv) => {
           return (

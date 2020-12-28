@@ -2,192 +2,219 @@
 // Villagers.js
 
 .villager-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  .villager-nav-container {
-    .btn-vill-nav {
-      background-color: #0ec7b8;
-      border-radius: 30px;
-      border: none;
-      box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
-      color: white;
-      padding: 12px 24px;
-      font-size: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-      &:hover {
-        background-image: url('../images/acnh-dialog-tile.png');
-      }
+    .villager-nav-container {
+        .btn-vill-nav {
+            background-color: #0ec7b8;
+            border-radius: 30px;
+            border: none;
+            box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+            color: white;
+            padding: 12px 24px;
+            font-size: 1rem;
 
-      &.vill-nav-all {
-        transform: scale(0.75) translateY(-48px);
-      }
+            &:hover {
+                background-image: url('../images/acnh-dialog-tile.png');
+            }
 
-      &.vill-nav-approved {
-        transform: translateX(-24px);
-      }
+            &.vill-nav-all {
+                transform: scale(0.75) translateY(-48px);
+            }
 
-      &.vill-nav-rejected {
-        transform: translateX(24px);
-      }
+            &.vill-nav-approved {
+                transform: translateX(-24px);
+            }
+
+            &.vill-nav-rejected {
+                transform: translateX(24px);
+            }
+        }
     }
-  }
 }
 
 // VillagersContainer.js
 // VillagersContainer.js
 
 .villager-container {
-  background-image: url('../images/acnh-tile-fruits.jpg');
-  border: 8px solid #fcf8dd;
-  border-radius: 30px;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 1000px 1000px;
-  height: 404px;
-  width: 270px;
-  margin: 50px;
-  padding: 50px;
-  text-align: center;
-  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
-
-  .villager-card {
-    display: flex;
-    align-items: center;
-    .villager-img {
-      // display: inline-block;
-      margin: 20px 0px 20px 20px;
-      width: 230px;
-      height: 380px;
-      object-fit: contain;
-    }
-  }
-
-  .button-swipe {
-    display: flex;
     position: relative;
-    bottom: 45%;
-    .nav-villager {
-      background-color: #f3f7de;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      position: absolute;
-      height: fit-content;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      padding-right: 10px;
-      // z-index: 1;
-      border: none;
-      box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
-      color: #88816d;
+    padding-top: 60px;
+    width: 450px;
 
-      &.nav-villager-reject {
-        // position: relative;
-        right: 100%;
-      }
+    .quotes-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        top: 24px;
+        position: absolute;
+        z-index: 1;
 
-      &.nav-villager-approve {
-        // position: relative;
-        left: 100%;
-      }
+        .speech-bubble-brown {
+            color: #fefbfd;
+            padding: 24px 32px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 24px;
+        }
+
+        .speech-bubble-light {
+            color: #89826f;
+            padding: 24px 32px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 24px;
+        }
     }
 
-    img {
-      width: 25px;
-      padding: 5px;
+    .villager-card-container {
+        cursor: pointer;
+        perspective: 2000px;
+
+        &.flip { // on "click", add this class to [.villager-card-container] DOM element
+            .villager-card-front {
+                transform: rotateY(180deg);
+            }
+
+            .villager-card-back {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .villager-card {
+            border-radius: 30px;
+            height: 404px;
+            width: 270px;
+            text-align: center;
+            box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
+            padding: 50px;
+            backface-visibility: hidden;
+            transition-duration: 0.4s;
+            margin: 0 auto;
+        }
+
+        .villager-card-front {
+            background-image: url('../images/acnh-tile-fruits.jpg');
+            border: 8px solid #fcf8dd;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 1000px 1000px;
+            display: flex;
+            align-items: center;
+
+            .villager-img {
+                margin: 20px 0px 20px 20px;
+                width: 230px;
+                height: 380px;
+                object-fit: contain;
+            }
+        }
+
+        .villager-card-back {
+            background-color: #ebefd6;
+            border: 8px solid #fef7da;
+            color: #87836d;
+            text-align: left;
+            margin-top: -520px;
+            transform: rotateY(180deg);
+
+            .villager-back-name {
+                color: #87836d;
+                border-bottom: dashed;
+                width: 50%;
+                padding-bottom: 20px;
+                margin-top: 90px;
+            }
+
+            p {
+                padding: 0;
+            }
+
+            h1,
+            h2 {
+                margin-bottom: 0;
+            }
+
+            .villager-back-info {
+                display: flex;
+                align-items: center;
+                color: #87836d;
+
+                .villager-back-info-text {
+                    width: 1500px;
+                }
+
+                .villager-img {
+                    padding-left: 10px;
+                    width: 1000px;
+                    object-fit: contain;
+                }
+            }
+        }
     }
-  }
 
-  .quotes-container {
-    display: flex;
-    position: absolute;
-    top: 18%;
-    font-size: 18px;
-    .speech-bubble-brown {
-      position: relative;
-      right: 20%;
-      color: #fefbfd;
-    }
-    .speech-bubble-light {
-      position: relative;
-      left: 13%;
-      color: #89826f;
-      p {
-        width: 50%;
-      }
-    }
-  }
+    .button-swipe {
+        display: flex;
 
-  .name-container {
-    display: flex;
-    justify-content: center;
-  }
-  .speech-bubble-orange {
-    background-image: url('../images/acnh-speech-bubble-bg-orange.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    font-size: 30px;
-    color: #fff8fe;
-  }
-  p {
-    padding: 46px 36px;
-  }
+        .nav-villager {
+            background-color: #f3f7de;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            height: fit-content;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            padding-right: 10px;
+            border: none;
+            box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.2);
+            color: #88816d;
 
-  .villager-container-back {
-    background-color: #ebefd6;
-    border: 8px solid #fef7da;
-    border-radius: 30px;
-    height: 404px;
-    width: 270px;
-    margin: 50px;
-    padding: 30px 50px 50px 30px;
-    text-align: center;
-    box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
-    color: #87836d;
-    text-align: left;
+            &.nav-villager-reject {
+                left: 0;
+            }
 
-    .villager-back-name {
-      color: #87836d;
-      border-bottom: dashed;
-      width: 50%;
-      padding-bottom: 20px;
-      margin-top: 90px;
+            &.nav-villager-approve {
+                right: 0;
+            }
+        }
+
+        img {
+            width: 25px;
+            padding: 5px;
+        }
     }
 
-    p {
-      padding: 0;
+    .name-container {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        transform: translateY(-42px);
+
+        .speech-bubble-orange {
+            background-image: url('../images/acnh-speech-bubble-bg-orange.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            font-size: 30px;
+            color: #fff8fe;
+            padding: 24px 48px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
-
-    h1,
-    h2 {
-      margin-bottom: 0;
-    }
-
-    .villager-back-info {
-      display: flex;
-      align-items: center;
-      color: #87836d;
-      // padding-top: 30px;
-
-      .villager-back-info-text {
-        width: 1500px;
-      }
-
-      .villager-img {
-        padding-left: 10px;
-        width: 1000px;
-        object-fit: contain;
-      }
-    }
-  }
 }
 
 .hide-slide {
-  display: none;
+    display: none;
 }
 
 .show-slide {
-  display: block;
+    display: block;
 }

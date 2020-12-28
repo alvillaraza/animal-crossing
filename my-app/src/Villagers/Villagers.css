@@ -25,33 +25,108 @@
   transform: translateX(24px);
 }
 .villager-container {
+  position: relative;
+  padding-top: 60px;
+  width: 450px;
+}
+.villager-container .quotes-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  top: 24px;
+  position: absolute;
+  z-index: 1;
+}
+.villager-container .quotes-container .speech-bubble-brown {
+  color: #fefbfd;
+  padding: 24px 32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+}
+.villager-container .quotes-container .speech-bubble-light {
+  color: #89826f;
+  padding: 24px 32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+}
+.villager-container .villager-card-container {
+  cursor: pointer;
+  perspective: 2000px;
+}
+.villager-container .villager-card-container.flip .villager-card-front {
+  transform: rotateY(180deg);
+}
+.villager-container .villager-card-container.flip .villager-card-back {
+  transform: rotateY(360deg);
+}
+.villager-container .villager-card-container .villager-card {
+  border-radius: 30px;
+  height: 404px;
+  width: 270px;
+  text-align: center;
+  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  backface-visibility: hidden;
+  transition-duration: 0.4s;
+  margin: 0 auto;
+}
+.villager-container .villager-card-container .villager-card-front {
   background-image: url('../images/acnh-tile-fruits.jpg');
   border: 8px solid #fcf8dd;
-  border-radius: 30px;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 1000px 1000px;
-  height: 404px;
-  width: 270px;
-  margin: 50px;
-  padding: 50px;
-  text-align: center;
-  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
-}
-.villager-container .villager-card {
   display: flex;
   align-items: center;
 }
-.villager-container .villager-card .villager-img {
+.villager-container .villager-card-container .villager-card-front .villager-img {
   margin: 20px 0px 20px 20px;
   width: 230px;
   height: 380px;
   object-fit: contain;
 }
+.villager-container .villager-card-container .villager-card-back {
+  background-color: #ebefd6;
+  border: 8px solid #fef7da;
+  color: #87836d;
+  text-align: left;
+  margin-top: -520px;
+  transform: rotateY(180deg);
+}
+.villager-container .villager-card-container .villager-card-back .villager-back-name {
+  color: #87836d;
+  border-bottom: dashed;
+  width: 50%;
+  padding-bottom: 20px;
+  margin-top: 90px;
+}
+.villager-container .villager-card-container .villager-card-back p {
+  padding: 0;
+}
+.villager-container .villager-card-container .villager-card-back h1,
+.villager-container .villager-card-container .villager-card-back h2 {
+  margin-bottom: 0;
+}
+.villager-container .villager-card-container .villager-card-back .villager-back-info {
+  display: flex;
+  align-items: center;
+  color: #87836d;
+}
+.villager-container .villager-card-container .villager-card-back .villager-back-info .villager-back-info-text {
+  width: 1500px;
+}
+.villager-container .villager-card-container .villager-card-back .villager-back-info .villager-img {
+  padding-left: 10px;
+  width: 1000px;
+  object-fit: contain;
+}
 .villager-container .button-swipe {
   display: flex;
-  position: relative;
-  bottom: 45%;
 }
 .villager-container .button-swipe .nav-villager {
   background-color: #f3f7de;
@@ -69,87 +144,32 @@
   color: #88816d;
 }
 .villager-container .button-swipe .nav-villager.nav-villager-reject {
-  right: 100%;
+  left: 0;
 }
 .villager-container .button-swipe .nav-villager.nav-villager-approve {
-  left: 100%;
+  right: 0;
 }
 .villager-container .button-swipe img {
   width: 25px;
   padding: 5px;
 }
-.villager-container .quotes-container {
-  display: flex;
-  position: absolute;
-  top: 18%;
-  font-size: 18px;
-}
-.villager-container .quotes-container .speech-bubble-brown {
-  position: relative;
-  right: 20%;
-  color: #fefbfd;
-}
-.villager-container .quotes-container .speech-bubble-light {
-  position: relative;
-  left: 13%;
-  color: #89826f;
-}
-.villager-container .quotes-container .speech-bubble-light p {
-  width: 50%;
-}
 .villager-container .name-container {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-42px);
 }
-.villager-container .speech-bubble-orange {
+.villager-container .name-container .speech-bubble-orange {
   background-image: url('../images/acnh-speech-bubble-bg-orange.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   font-size: 30px;
   color: #fff8fe;
-}
-.villager-container p {
-  padding: 46px 36px;
-}
-.villager-container .villager-container-back {
-  background-color: #ebefd6;
-  border: 8px solid #fef7da;
-  border-radius: 30px;
-  height: 404px;
-  width: 270px;
-  margin: 50px;
-  padding: 30px 50px 50px 30px;
-  text-align: center;
-  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
-  color: #87836d;
-  text-align: left;
-}
-.villager-container .villager-container-back .villager-back-name {
-  color: #87836d;
-  border-bottom: dashed;
-  width: 50%;
-  padding-bottom: 20px;
-  margin-top: 90px;
-}
-.villager-container .villager-container-back p {
-  padding: 0;
-}
-.villager-container .villager-container-back h1,
-.villager-container .villager-container-back h2 {
-  margin-bottom: 0;
-}
-.villager-container .villager-container-back .villager-back-info {
+  padding: 24px 48px 32px;
   display: flex;
   align-items: center;
-  color: #87836d;
-}
-.villager-container .villager-container-back .villager-back-info .villager-back-info-text {
-  width: 1500px;
-}
-.villager-container .villager-container-back .villager-back-info .villager-img {
-  padding-left: 10px;
-  width: 1000px;
-  object-fit: contain;
+  justify-content: center;
 }
 .hide-slide {
   display: none;
