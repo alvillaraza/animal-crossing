@@ -14,6 +14,7 @@ function VillagersContainer({
 }) {
     const [villagers, setVillagers] = useState([]);
     const [currentVillager, setCurrentVillager] = useState(0);
+    const [cardFaceBack, setCardFaceBack] = useState(false);
 
     useEffect(() => {
         getVillagers();
@@ -78,7 +79,12 @@ function VillagersContainer({
                     </div>
 
                     <div className='villager-card-wrapper'>
-                        <div className='villager-card-container'>
+                        <div
+                            className={`villager-card-container ${
+                                cardFaceBack === true ? 'show-back' : ''
+                            }`}
+                            onClick={() => setCardFaceBack(!cardFaceBack)}
+                        >
                             {/* Front of Villager Card */}
                             <div className='villager-card villager-card-front'>
                                 <img

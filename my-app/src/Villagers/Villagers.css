@@ -58,10 +58,10 @@
   cursor: pointer;
   perspective: 2000px;
 }
-.villager-container .villager-card-container.flip .villager-card-front {
+.villager-container .villager-card-container.show-back .villager-card-front {
   transform: rotateY(180deg);
 }
-.villager-container .villager-card-container.flip .villager-card-back {
+.villager-container .villager-card-container.show-back .villager-card-back {
   transform: rotateY(360deg);
 }
 .villager-container .villager-card-container .villager-card {
