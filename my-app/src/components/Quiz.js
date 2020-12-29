@@ -33,7 +33,7 @@ function App() {
         }`}
         onClick={getPrevSlide}
       >
-        <img src={minus} /> PREV
+        <img src={minus} /> Prev
       </button>
       <button
         onClick={getNextSlide}
@@ -41,7 +41,7 @@ function App() {
           currentSlide === QuizData.length ? "next-button-hide" : ""
         }`}
       >
-        <img src={plus} /> NEXT
+        <img src={plus} /> Next
       </button>
 
       {QuizData.map((question, index) => {
