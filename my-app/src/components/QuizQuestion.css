@@ -111,10 +111,10 @@
   align-items: center;
   margin-top: 50px;
 }
-.final-container .final-score-hide {
+.final-score-hide {
   display: none;
 }
-.final-container .final-score {
+.final-score {
   background-color: #e6b501;
   color: #fcf3d5;
   font-size: 20px;
@@ -124,7 +124,7 @@
   margin-bottom: -24px;
   z-index: 1;
 }
-.final-container .restart {
+.restart {
   background-color: #f65845;
   color: #fefef9;
   font-size: 30px;
@@ -133,7 +133,7 @@
   box-shadow: 0px 15px 1px rgba(0, 0, 0, 0.2);
   border: none;
 }
-.final-container .bell-score {
+.bell-score {
   background-color: #f9f6e5;
   border-radius: 30px;
   border: 10px solid;
@@ -146,7 +146,7 @@
   padding: 60px;
   margin-bottom: 20px;
 }
-.final-container .bell-score img {
+.bell-score img {
   max-width: 80px;
   padding-right: 20px;
 }
