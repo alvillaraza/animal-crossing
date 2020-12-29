@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   padding-right: 10px;
+  margin-top: -19px;
 }
 .remove-vill img {
   transform: rotate(45deg);

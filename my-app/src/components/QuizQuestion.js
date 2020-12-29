@@ -32,7 +32,7 @@ function QuizQuestion({ currentSlide, index, question, score, setScore }) {
           className={`validation-container
             ${answered ? "show" : "hide"}`}
         >
-          {response === true ? <img className='correct-image' src={correct} /> : <img src={incorrect} />}
+          {response === true ? <img src={correct} /> : <img src={incorrect} />}
         </div>
         <img
           src={question.image}
