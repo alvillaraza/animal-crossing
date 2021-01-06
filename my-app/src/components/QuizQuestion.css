@@ -1,5 +1,7 @@
 .quiz-wrapper {
   position: relative;
+  max-width: fit-content;
+  margin: auto;
 }
 .quiz-wrapper .nav-button {
   background-color: #f3f7de;
