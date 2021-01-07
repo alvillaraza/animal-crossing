@@ -25,10 +25,10 @@
   padding: 5px;
 }
 .quiz-wrapper .nav-button.nav-button-previous {
-  left: 10%;
+  left: 18%;
 }
 .quiz-wrapper .nav-button.nav-button-next {
-  right: 10%;
+  right: 18%;
 }
 .quiz-wrapper .prev-button-disable {
   pointer-events: none;
@@ -67,7 +67,7 @@
 }
 .quiz-wrapper .question-container .question-image-container .validation-container {
   position: absolute;
-  right: 8%;
+  right: 20%;
   top: 3%;
 }
 .quiz-wrapper .question-container .question {
