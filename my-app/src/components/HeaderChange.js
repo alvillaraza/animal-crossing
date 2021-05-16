@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import Form from './components/Form';
-// import "./App.css";
+
 
 function HeaderChange() {
   const [newHeader, setNewHeader] = useState("Some Header");
@@ -10,12 +9,7 @@ function HeaderChange() {
     console.log(newHeader);
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   console.log(newHeader);
-  //   //TO DO: make new header be the submitted item in form
-  //   setNewHeader(newHeader)
-  // };
+
 
   return (
     <div>

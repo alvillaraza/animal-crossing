@@ -146,14 +146,7 @@ function VillagersContainer({
                         </div>
                     </div>
 
-                    {/* <p>
-              {villager.gender} {villager.species}
-            </p>
-            <p>
-              {villager.birthday_month} {villager.birthday_day}
-            </p>
-            <p>{villager.sign}</p>
-            <p>Personality: {villager.personality}</p> */}
+            
                 </div>
             ))}
         </>
